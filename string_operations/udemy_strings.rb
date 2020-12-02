@@ -60,3 +60,18 @@ puts "Ruby".rjust(20, "#")
 puts "Ruby            ".rstrip
 puts "             Ruby".lstrip
 puts "       Ruby   ".strip
+
+puts message = 'I don\'t like cats' # the backslash makes the single quatations useable without breaking
+
+# two ways to open strings
+message = <<-STRING
+first line
+second line
+STRING
+puts message
+
+message = %Q( first line
+second line)
+puts message
+
+puts %{Ruby is your best friend.}
