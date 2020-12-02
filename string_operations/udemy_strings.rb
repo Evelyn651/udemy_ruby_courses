@@ -1,3 +1,4 @@
+# string operation
 name = "John"
 puts "Hello #{name}"
 puts "Result #{5 + 9}"
@@ -43,4 +44,19 @@ puts message << "cats"
 puts message
 puts message.gsub("cats", "dogs")
 
-
+# string methods
+a = "5".to_i
+puts a
+puts a.class
+puts "A".to_i
+puts 5.to_s
+puts a = ""
+puts a.empty?
+puts "Ruby".center(20)
+puts "Ruby".center(20, "-")
+puts "Ruby".ljust(20)
+puts "Ruby".rjust(20)
+puts "Ruby".rjust(20, "#")
+puts "Ruby            ".rstrip
+puts "             Ruby".lstrip
+puts "       Ruby   ".strip
