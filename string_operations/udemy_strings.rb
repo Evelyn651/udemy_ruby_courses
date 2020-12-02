@@ -22,6 +22,25 @@ puts message.capitalize
 puts message.capitalize! # the bang method is any built in method with an ! at the end it replaces the orginal object with the new object
 puts message.swapcase
 puts message.chop
-
 puts message
+
+puts message.chop!
+puts message.chomp("friend.")
+puts message.include?("best")
+puts message.index("your")
+puts message.start_with?("ruby")
+puts message.start_with?("Ruby")
+puts message.end_with?("friend.")
+puts message.delete_suffix("friend.")
+puts message.delete_prefix("Ruby")
+
+puts ["a", "b", "c"].join
+puts ["a", "b", "c"].join("-")
+
+puts message = ""
+puts message << "I like "
+puts message << "cats"
+puts message
+puts message.gsub("cats", "dogs")
+
 
