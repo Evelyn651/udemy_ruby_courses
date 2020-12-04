@@ -2,8 +2,6 @@ def is_palindrome_easy(word)
 	word == word.reverse
 end
 
-
-
 def is_palindrome(word)
 	return true if word.length <= 1
 	return false if word[0] != word[-1]
