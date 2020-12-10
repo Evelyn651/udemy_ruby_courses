@@ -32,7 +32,7 @@
 # 	puts "no errors!"
 # end
 #
-filename = "./test.txt.rb"
+filename = "./test.txt"
 begin
 	file = File.open(filename)
 	if file
