@@ -24,21 +24,41 @@
 # w.run
 #
 # PREPEND keyword
-module WorkerDebugger
-	def run(params)
-		puts "Running with param: #{params.inspect}"
-		result = super
-		puts "Completed! Result: #{result}"
+# module WorkerDebugger
+# 	def run(params)
+# 		puts "Running with param: #{params.inspect}"
+# 		result = super
+# 		puts "Completed! Result: #{result}"
+# 	end
+# end
+#
+# class Worker
+# 	prepend WorkerDebugger
+# 	def run(params)
+# 		puts "Working on param: #{params.inspect}"
+# 		params.map {|i| i ** 2}
+# 	end
+# end
+#
+# p Worker.ancestors
+# w = Worker.new
+# w.run [1,3,5]
+#
+#  EXTEND keyword
+#
+module ModuleA
+	def self.method1
+		puts "method1: class method"
+	end
+	def method2
+		puts "method2: instance method"
 	end
 end
 
-class Worker
-	prepend WorkerDebugger
-	def run(params)
-		puts "Working on param: #{params.inspect}"
-		params.map {|i| i ** 2}
-	end
+class Test
+
 end
 
-w = Worker.new
-w.run [1,3,5]
+object = Test.new
+object.extend ModuleA
+object.method2
