@@ -28,5 +28,9 @@ class Manager
 	def coin_list
 		@@repo.keys
 	end
-	
+
+	def calculate(amount, symbol, to)
+		coin = @@repo[symbol]
+		amount*coin.send(to.to_sym)
+	end
 end
