@@ -12,7 +12,9 @@ def menu
 
 		case choice
 			when "a"
-
+				coin_list = manager.coin_list
+				puts "Available Coins"
+				puts coin_list.join(", ").center(50, "-")
 		end
 
 		break unless choice != "q"

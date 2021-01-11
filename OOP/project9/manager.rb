@@ -24,4 +24,9 @@ class Manager
 		uri = URI(url)
 		Net::HTTP.get(uri)
 	end
+
+	def coin_list
+		@@repo.keys
+	end
+	
 end
